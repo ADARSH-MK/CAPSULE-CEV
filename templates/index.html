@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 64, 128, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            z-index: 10;
+        }
+
+        .image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-container iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+            z-index: 11;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+            z-index: 15;
+        }
+
+        .login-button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <iframe src="https://drive.google.com/file/d/15yubhthH7egJ5D2SSokzqqiijIVzTsmi/preview?usp=sharing" allow="autoplay"></iframe>
+    </div>
+
+    <div class="header">College of Engineering Vadakara</div>
+
+    <!-- Login Button -->
+    <button class="login-button" onclick="goToLogin()">Login</button>
+
+    <script>
+        function goToLogin() {
+            window.location.href = "/login";
+        }
+    </script>
+
+</body>
+</html>
