@@ -47,11 +47,11 @@ def login():
                 sheet_username = row[0]
                 sheet_password = row[1]
                 if username == sheet_username and password == sheet_password:
-                    return redirect(url_for('dashboard'))
+                    return render_template('login.html',message='Login Successful!',message_type='sucess')
 
         # If no match found
-        flash('Invalid username or password.', 'error')
-
+        return render_template('login.html',message='Invalid username or password.',message_type='sucess')
+        
     return render_template('login.html')
 
 @app.route('/dashboard')
